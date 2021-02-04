@@ -45,7 +45,7 @@ class Track:
                 self._load_gpx_data(mod_gpxpy.parse(file))
         except:
             print(
-                f"Something went wrong when loading GPX. for file {self.file_names[0]}"
+                f"Something went wrong when loading GPX. for file {self.file_names[0]}, we just ignore this file and continue"
             )
             pass
 
@@ -134,7 +134,9 @@ class Track:
             self.file_names.extend(other.file_names)
             self.special = self.special or other.special
         except:
-            print(f"something wrong append this {self.end_time},in files {str(self.file_names)}")
+            print(
+                f"something wrong append this {self.end_time},in files {str(self.file_names)}"
+            )
             pass
 
     def load_cache(self, cache_file_name):
