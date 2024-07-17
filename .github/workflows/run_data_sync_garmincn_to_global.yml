@@ -1,4 +1,4 @@
-name: Run Data Sync
+name: Run Data Sync GarminCN to Global
 
 on:
   workflow_dispatch: 
