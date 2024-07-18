@@ -3,7 +3,7 @@ name: Run Data Sync GarminCN to Global
 on:
   workflow_dispatch: 
   schedule:
-    - cron: '01 0 * * *'
+    - cron: '31 23/8 * * *' #23:30, 07:30, 15:30
   push:
     branches:
       - master
